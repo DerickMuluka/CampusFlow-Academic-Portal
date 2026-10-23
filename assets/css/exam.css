@@ -1,0 +1,40 @@
+.exam-body { padding-top:66px; }
+.proctor-bar { position:fixed; top:0; left:0; right:0; height:58px; background:var(--primary); display:flex; align-items:center; justify-content:space-between; padding:0 clamp(12px,3vw,20px); z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,.2); }
+.proctor-info { display:flex; align-items:center; gap:10px; color:var(--white); font-size:.82rem; font-weight:600; }
+.rec-dot { width:10px; height:10px; background:#ff4444; border-radius:50%; animation:pulse 1.5s infinite; flex-shrink:0; }
+@keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.3;} }
+#camPreview { width:50px; height:38px; border-radius:6px; object-fit:cover; border:2px solid var(--accent); background:#000; }
+.timer-box { background:var(--accent); color:var(--primary); padding:8px 18px; border-radius:8px; font-weight:800; font-size:1.25rem; font-variant-numeric:tabular-nums; min-width:96px; text-align:center; }
+.timer-warning { background:var(--danger); color:var(--white); animation:pulse 1s infinite; }
+.exam-container { max-width:820px; margin:0 auto; padding:28px clamp(14px,3vw,20px) 100px; }
+.exam-container h1 { color:var(--primary); font-size:clamp(1.2rem,3vw,1.5rem); }
+.exam-meta { color:var(--muted); font-size:.82rem; margin:4px 0 22px; padding-bottom:14px; border-bottom:2px solid var(--border); }
+.question-card { background:var(--white); border-radius:var(--radius); padding:clamp(16px,3vw,22px); margin-bottom:16px; box-shadow:var(--shadow); border-left:4px solid var(--accent); }
+.q-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; gap:8px; }
+.q-num { font-weight:700; color:var(--primary); font-size:.76rem; text-transform:uppercase; letter-spacing:.5px; }
+.q-marks { background:var(--bg); padding:2px 10px; border-radius:20px; font-size:.72rem; font-weight:600; color:var(--accent); white-space:nowrap; }
+.q-text { font-size:1rem; font-weight:600; margin-bottom:14px; }
+.options { display:flex; flex-direction:column; gap:9px; }
+.option-label { display:flex; align-items:center; gap:12px; padding:11px 13px; border:2px solid var(--border); border-radius:8px; cursor:pointer; transition:all .15s; }
+.option-label:hover { border-color:var(--accent); background:#fffdf5; }
+.option-label input { display:none; }
+.option-label:has(input:checked) { border-color:var(--accent); background:#fff8e6; }
+.option-label input:checked + .option-badge { background:var(--accent); color:var(--primary); }
+.option-badge { width:30px; height:30px; border-radius:50%; background:var(--bg); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.82rem; color:var(--primary); flex-shrink:0; }
+.option-text { font-size:.92rem; }
+.submit-area { text-align:center; margin-top:28px; }
+.warning-text { font-size:.78rem; color:var(--danger); font-weight:600; margin-bottom:12px; }
+.btn-submit { background:var(--accent); color:var(--primary); border:none; padding:16px 50px; font-size:1.05rem; font-weight:800; border-radius:8px; cursor:pointer; text-transform:uppercase; letter-spacing:1px; }
+.btn-submit:hover { background:var(--accent-hover); }
+.options-display { display:flex; flex-direction:column; gap:8px; margin-top:10px; }
+.option-row { display:flex; align-items:center; gap:12px; padding:8px 12px; border:1px solid var(--border); border-radius:6px; font-size:.88rem; }
+.correct-opt { background:#f0faf2; border-color:var(--success); }
+.opt-tag { margin-left:auto; font-size:.72rem; font-weight:700; color:var(--success); }
+@media (max-width:520px) {
+    .proctor-bar { height:54px; }
+    .proctor-info { font-size:.7rem; gap:6px; }
+    #camPreview { width:40px; height:30px; }
+    .timer-box { font-size:1rem; padding:6px 10px; min-width:72px; }
+    .exam-body { padding-top:62px; }
+    .btn-submit { width:100%; padding:15px; }
+}
