@@ -1,0 +1,91 @@
+.result-hero {
+    border-radius: var(--radius);
+    padding: 40px 24px;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 28px;
+}
+.result-hero.pass { background: linear-gradient(135deg, #1e7e34, #2ecc71); }
+.result-hero.fail { background: linear-gradient(135deg, #a93226, #e74c3c); }
+.result-hero h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); letter-spacing: 3px; }
+.score-big { font-size: clamp(2.4rem, 7vw, 3.4rem); font-weight: 800; line-height: 1.1; margin: 6px 0; }
+
+.review-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--border);
+}
+.review-correct { border-left-color: var(--success); }
+.review-wrong { border-left-color: var(--danger); }
+.review-skipped { border-left-color: var(--muted); }
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: .82rem;
+    color: var(--muted);
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.review-status { font-weight: 700; }
+.review-correct .review-status { color: var(--success); }
+.review-wrong .review-status { color: var(--danger); }
+.review-skipped .review-status { color: var(--muted); }
+
+.review-text {
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: .95rem;
+    color: var(--text);
+}
+.review-options { display: flex; flex-direction: column; gap: 8px; }
+.review-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: .9rem;
+    flex-wrap: wrap;
+}
+.opt-correct { border-color: var(--success); background: #f0faf2; }
+.opt-wrong { border-color: var(--danger); background: #fdf0ef; }
+
+.option-badge {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: .78rem;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+.opt-tag {
+    margin-left: auto;
+    font-size: .72rem;
+    font-weight: 700;
+    color: var(--success);
+}
+.opt-tag-wrong { color: var(--danger); }
+
+.missed-note {
+    margin-top: 10px;
+    font-size: .82rem;
+    color: var(--danger);
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .result-hero { padding: 28px 16px; }
+    .score-big { font-size: 2.2rem; }
+    .review-option { font-size: .85rem; padding: 8px 10px; }
+}
