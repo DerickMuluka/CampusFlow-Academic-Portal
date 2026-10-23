@@ -1,0 +1,21 @@
+@media (max-width: 900px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 60px;
+        bottom: 0;
+        transform: translateX(-100%);
+        z-index: 99;
+    }
+    .sidebar.open { transform: translateX(0); }
+    .main-content { padding: 20px 14px; }
+}
+
+@media (max-width: 600px) {
+    body { font-size: .95rem; }
+    h1 { font-size: 1.3rem; }
+    .stat-num { font-size: 1.6rem; }
+    .data-table { display: block; overflow-x: auto; white-space: nowrap; }
+    .card-form { padding: 18px 14px; }
+    .question-card { padding: 16px 14px; }
+}
